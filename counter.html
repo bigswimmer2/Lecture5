@@ -15,7 +15,11 @@
                 alert(`Count is now ${counter}`)
             }
 
-            document.querySelector('button').onclick = count;
+            //lets the whole content load before using
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelector('button').onclick = count;
+            });
+            
         }
     </script>
 </head>
